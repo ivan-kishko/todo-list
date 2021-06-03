@@ -3,9 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import {HashRouter} from "react-router-dom";
+import Routes from "./RoutesTodoList";
 
 ReactDOM.render(
-    <App />,
+    <HashRouter>
+        <Routes/>
+        {/*<App/>*/}
+    </HashRouter>,
     document.getElementById('root')
 );
 
