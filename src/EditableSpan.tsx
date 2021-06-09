@@ -1,4 +1,5 @@
 import React, {ChangeEvent, KeyboardEvent, useState} from 'react';
+import {TextField} from "@material-ui/core";
 
 type EditableSpanPropsType = {
     title: string
@@ -31,12 +32,12 @@ export function EditableSpan(props: EditableSpanPropsType) {
         }
     }
 
-    //make onBlur return last title if empty field submitted
+    //make onBlur or Enter press return last title if empty field submitted
     const [tempTitle, setTempTitle] = useState<string>(title)
 
     return (
         editMode
-            ? <input
+            ? <TextField
                 value={title}
                 onChange={onChangeTitle}
                 onBlur={offEditMode}
