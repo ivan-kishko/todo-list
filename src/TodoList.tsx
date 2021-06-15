@@ -48,6 +48,7 @@ function TodoList(props: PropsTodoListType) {
         )
     });
 
+    //Filters
     const onClickSetAllFilter = () => {
         props.changeTodoListFilter("all", props.todoListID)
     }
