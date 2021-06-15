@@ -24,6 +24,7 @@ export type TodoListsReducerActionsType = RemoveTodoListActionType
     | ChangeTodoListFilterActionType
     | ChangeTodoListTitleActionType
 
+//reducer for all actions on TodoList
 export const todoListsReducer = (todoLists: TodoListType[], action: TodoListsReducerActionsType) => {
     switch (action.type) {
         case "REMOVE-TODOLIST":
