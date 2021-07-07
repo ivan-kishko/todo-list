@@ -89,7 +89,8 @@ const TodoList = React.memo(function TodoListComponent(props: TodoListPropsType)
                 removeTask={removeTaskCallback}
                 changeTaskTitle={changeTaskTitleCallback}
             />
-        )});
+        )
+    });
 
     return (
         <div className="TodoList">
