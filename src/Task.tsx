@@ -19,15 +19,16 @@ const Task = React.memo(function TaskComponent({id, changeTaskTitle, ...props}: 
     const changeTaskTitleCallback = useCallback((title: string) => changeTaskTitle(id, title), [changeTaskTitle, id])
 
     return (
-        <li key={id}><span className={props.isDone ? "is-done" : ""}>
-                    <Checkbox
-                        size={"small"}
-                        color={"primary"}
-                        checked={props.isDone}
-                        onChange={changeTaskStatus}
-                    />
-                    <EditableSpan title={props.title} changeTitle={changeTaskTitleCallback}/>
-                </span>
+        <li key={id}>
+            <span className={props.isDone ? "is-done" : ""}>
+                <Checkbox
+                    size={"small"}
+                    color={"primary"}
+                    checked={props.isDone}
+                    onChange={changeTaskStatus}
+                />
+                <EditableSpan title={props.title} changeTitle={changeTaskTitleCallback}/>
+            </span>
             <IconButton onClick={removeTask} size={"small"} style={{color: 'black'}}>
                 <Delete/>
             </IconButton>
