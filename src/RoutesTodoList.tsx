@@ -1,6 +1,6 @@
 import React from 'react';
 import {Switch, Redirect, Route} from 'react-router-dom';
-import App from "./App";
+import AppWithRedux from "./AppWithRedux";
 
 export const PATH = {
     APP: '/todolist-app',
@@ -17,7 +17,7 @@ function Routes() {
                 <Route path={'/'} exact render={() => <Redirect to={PATH.APP}/>}/>
 
                 {/*// add routes*/}
-                <Route path={PATH.APP} render={() => <App/>}/>
+                <Route path={PATH.APP} render={() => <AppWithRedux/>}/>
 
                 {/*у этого роута нет пути, он отрисуется если пользователь захочет попасть на несуществующую страницу*/}
                 {/*тут нужен компонент для роута 404*/}
